@@ -1,0 +1,20 @@
+
+<FontAwesome name="diamond" size={24} color="black" />
+        <AntDesign name="heart" size={24} color="black" />
+        <AntDesign name="inbox" size={24} color="black" />
+
+    <SimpleLineIcons name="notebook" size={24} color="black" />
+      <Ionicons name="ios-pencil-outline" size={24} color="black" />
+
+      <AntDesign name="setting" size={24} color="black" />
+      <MaterialIcons name="online-prediction" size={24} color="black" />
+      <MaterialIcons name="payment" size={24} color="black" />
+      <FontAwesome name="send-o" size={24} color="black" />
+      <FontAwesome name="money" size={24} color="black" />
+      <FontAwesome name="support" size={24} color="black" />
+
+      <View style={{ flex: 5, backgroundColor: "#FFFFFF" }} />
+        <View style={styles.textPrincipal}>
+          <Text style={styles.texto}>General</Text>
+
+        </View>

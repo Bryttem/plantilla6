@@ -1,29 +1,80 @@
 import { setStatusBarBackgroundColor, StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, Image } from 'react-native';
-import { AntDesign,Entypo, FontAwesome,SimpleLineIcons, Ionicons, MaterialIcons } 
+import { AntDesign,Entypo, FontAwesome,SimpleLineIcons, Ionicons, MaterialIcons, MaterialCommunityIcons } 
 from '@expo/vector-icons';
 
 export default function App() {
   return (
     <View style={styles.container}>
       <View style={styles.header}>
-      <Ionicons style={styles.campana} name="notifications-outline" size={30} color="white" />
-      <Text style={{paddingLeft: 13}}>Fasta Mb</Text>
-      <Text style={{paddingLeft: 13}}>Personal Balance: R$0</Text>
+        <Ionicons style={styles.campana} name="notifications-outline" size={30} color="white" />
+         <Text style={styles.superior}>Fasta Mb</Text>
+           <Text style={styles.superiorDOS}>Personal Balance: R$0</Text>
+        </View>
+
+
+    <View style={styles.container_middle}>
+      <Entypo style={styles.paddi} name="switch" size={24} color="green"/>
+        <Text style={{paddingLeft: 12}}>Seller Mode</Text>
+        </View>
+
+    <View style={styles.containerText}>
+      <View style={styles.containerComement2}>
+       <Text style={styles.textPrincipal}>My Fiverr</Text>
       </View>
-        <View style={styles.container_middle}>
-         <Entypo style={styles.paddi} name="switch" size={24} color="green"/>
-           <Text style={{paddingLeft: 12}}>Seller Mode</Text>
-            <View style={styles.containerFooter}></View>
+    </View>
+
+    <View style={styles.containerText}>
+      <View style={styles.containerComement2}>
+        <FontAwesome style={styles.icon} name="diamond" size={24} color="gray" />
+         <View>
+            <Text style={styles.text}>Get Inspired</Text>
+          </View>
+                <MaterialIcons style={styles.arrow} name="arrow-forward-ios" size={24} color="black" />
+      </View>
+       <View style={styles.containerComement2}>
+          <AntDesign style={styles.icon} name="heart" size={24} color="gray" />
+            <View>
+              <Text style={styles.text}>Save Gigs</Text>
+            </View>
+           <MaterialIcons style={styles.arrow} name="arrow-forward-ios" size={24} color="black" />
+       
+        </View>
+        <View style={styles.containerComement2}>
+        <AntDesign name="inbox" size={24} color="gray" />
+            <View>
+              <Text style={styles.text}>My Interest</Text>
+            </View>
+            <MaterialIcons style={styles.arrow} name="arrow-forward-ios" size={24} color="black" />
+        
+      </View>
+      </View>
+      
+
+
+
+
+
+
+
+
+
+
+    <View style={styles.containerFooter}>
+      <Entypo style={styles.footerIcon} name="home" size={35} color="white" />
+        <Entypo style={styles.footerIcon} name="message" size={35} color="white" /> 
+         <AntDesign style={styles.footerIcon} name="search1" size={35} color="white" />
+           <AntDesign style={styles.footerIcon} name="profile" size={35} color="white" /> 
+            <MaterialCommunityIcons style={styles.footerIcon} name="face-man" size={35} color="green" />
        </View>
-       <View style={styles.containerFooter}></View>
     </View>
   );
-}
+};
 
 const styles = StyleSheet.create({
   container: {
-    height: "70%"
+    flex: 1,
+    backgroundColor: "white",
   },
   header: {
     height: "30%",
@@ -40,7 +91,6 @@ const styles = StyleSheet.create({
     marginTop: 50,
     
   },
-
   container_middle: {
     width: "90%",
     absolute: 1,
@@ -53,30 +103,66 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     backgroundColor: "white",
   },
-  containerFooter: {
-   
-    height: "90%",
-    backgroundColor: "black",
-    flexDirection: "row",
-    margin: 20,
-    justifyContent: "center",
-    position: "absolute",
-    bottom: 5,
-
+  containerText: {
+    borderBottomWidth: 1,
+    borderColor: "#aaaa",
+    marginHorizontal: 15,
+    marginTop: 10,
   },
-  comment: {
-    color: "#c6c6c6",
-    marginLeft: 50,
-    marginBottom: 15,
+  containerComement2: {
+    flexDirection: "row",
+    marginTop: 10,
+    
   },
   textPrincipal: {
-    marginHorizontal: 10,
-    marginTop: 20,
-    marginBottom: 10,
-  },
-  texto: {
-    color: "white",
+    color: "black",
     fontSize: 20,
-    fontWeight: "bold",
+    marginTop: 10,
+    fontWeight: "bold",  
   },
+
+  text: {
+    color: "black",
+    fontSize: 15,
+    marginRight: 1,
+    fontWeight: "bold",
+    justifyContent: "center",
+    marginHorizontal:13
+    
+
+
+  },
+  icon: {
+    marginRight: 1,
+ 
+},
+  arrow: {
+    marginLeft: "55%",
+},
+  superior: {
+    marginLeft: 160,
+    marginTop: 60,
+    top: 40,
+  },
+  containerFooter: {
+    position: 'absolute',
+    width: "100%",
+    backgroundColor: "black",
+    top: "90%",
+    height: "10%",
+    flexDirection: "row",
+    justifyContent: "center",
+    bottom: 5,
+  },
+  footerIcon: {
+    marginHorizontal: 26,
+    marginTop: 20,
+  },
+  superiorDOS: {
+    marginLeft: 120,
+    marginTop: 40,
+    marginBottom: 10,
+    justifycontent: "center",
+  },
+
 });

@@ -1,11 +1,4 @@
-import { setStatusBarBackgroundColor, StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, Image, ScrollView } from 'react-native';
-import { AntDesign,Entypo, FontAwesome,SimpleLineIcons, Ionicons, MaterialIcons, MaterialCommunityIcons } 
-from '@expo/vector-icons';
-
-export default function App() {
-  return (
-    <View style={styles.container}>
+<View style={styles.container}>
           <View style={styles.header}>
           <Image
               style={styles.imagenProfile}
@@ -22,7 +15,9 @@ export default function App() {
             </View>
 
         <View style={styles.containerText}>
-        <Text style={styles.textPrincipal}>My Fiverr</Text>
+          <View style={styles.containerComement2}>
+          <Text style={styles.textPrincipal}>My Fiverr</Text>
+          </View>
         </View>
 
         <View style={styles.containerText}>
@@ -53,8 +48,9 @@ export default function App() {
           </View>
           
           <View style={styles.containerText}>
+          <View style={styles.containerComement2}>
           <Text style={styles.textPrincipal}>Buying</Text>
-
+          </View>
         </View>
         <View style={styles.containerText}>
           <View style={styles.containerComement2}>
@@ -75,7 +71,9 @@ export default function App() {
           </View>
 
           <View style={styles.containerText}>
-          <Text style={styles.textPrincipal}>General</Text>
+            <View style={styles.containerComement2}>
+              <Text style={styles.textPrincipal}>General</Text>
+          </View>
         </View>
 
         <View style={styles.containerText}>
@@ -141,7 +139,6 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: "white",
-
   },
   header: {
     height: "30%",
@@ -177,8 +174,6 @@ const styles = StyleSheet.create({
   containerComement2: {
     flexDirection: "row",
     marginTop: 10,
-    bottom: 10,
-
     
   },
   textPrincipal: {
